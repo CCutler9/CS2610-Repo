@@ -1,0 +1,23 @@
+Corbin:
+Global HTML code (header, footer, side menu)
+Saved searches side menu
+Global css
+
+Chapter:
+
+
+Chitmoe:
+
+
+Derek:
+
+
+
+Pick one page and paste it under your name.
+The remaining pages will be worked on collectively.
+
+Login
+Dashboard
+Search
+Search Results
+Profile
