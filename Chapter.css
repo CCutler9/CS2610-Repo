@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  <title>CS2610 Group Project</title>
 </head>
 <body>
 <h1>Welcome to my first HTML program</h1>
   <p>If you want to study more about HTML you can join me anytimes if you want
   but you don't have to. I really like HTML and I hope you enjoy it as well</p>
 
+  <a href="usu.edu">Click here if you wanna know more about CS programs at USU
+  </a>
+    <ul>
+        <li>CS Department</li>
+        <li>Mathematic Department</li>
+        <li>College of Engeneering programs</li>
+
+    </ul>
 
 
 </body>
