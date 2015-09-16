@@ -1,5 +1,5 @@
 Corbin:
-Global HTML code (header, footer, side menu)
+Global HTML code (header, footer)
 Saved searches side menu
 Global css
 
