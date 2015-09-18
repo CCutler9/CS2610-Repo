@@ -11,15 +11,13 @@ Chitmoe:
 Profile
 
 Derek:
-
+Search
+Sign Up
 
 
 Pick one page and paste it under your name.
 The remaining pages will be worked on collectively.
 
-
-Search
-Sign Up
 
 Login page leads to either the sign up page or the dashboard
 Search page shows results using the dashboard page
