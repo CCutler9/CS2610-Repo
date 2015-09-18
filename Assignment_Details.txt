@@ -4,7 +4,8 @@ Saved searches side menu
 Global css
 
 Chapter:
-
+Login
+Dashboard
 
 Chitmoe:
 Profile
@@ -16,8 +17,7 @@ Derek:
 Pick one page and paste it under your name.
 The remaining pages will be worked on collectively.
 
-Login
-Dashboard
+
 Search
 Sign Up
 
