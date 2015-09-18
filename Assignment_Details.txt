@@ -10,14 +10,13 @@ Chitmoe:
 
 
 Derek:
-
+Dashboard
 
 
 Pick one page and paste it under your name.
 The remaining pages will be worked on collectively.
 
 Login
-Dashboard
 Search
 Search Results
 Profile
