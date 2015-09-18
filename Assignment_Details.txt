@@ -4,19 +4,22 @@ Saved searches side menu
 Global css
 
 Chapter:
-
+Login
+Dashboard
 
 Chitmoe:
-
+Profile
 
 Derek:
-Dashboard
+Search
+Sign Up
 
 
 Pick one page and paste it under your name.
 The remaining pages will be worked on collectively.
 
-Login
-Search
-Search Results
-Profile
+
+Login page leads to either the sign up page or the dashboard
+Search page shows results using the dashboard page
+Profile, search, and dashboard page can be reached from any other page
+
