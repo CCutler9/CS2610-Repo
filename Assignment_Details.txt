@@ -10,8 +10,8 @@ Chitmoe:
 Profile
 
 Derek:
-Search
-Sign Up
+Search/search results
+Sign Up/login
 
 
 Pick one page and paste it under your name.
