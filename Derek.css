@@ -1,1 +1,137 @@
 
+@charset "UTF-8";
+
+/*------------------------------*\
+      !DIV POSITION CLASSES
+      !!GLOBAL
+\*------------------------------*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.squeeze {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+}
+
+.clear:after, .squeeze:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+}
+
+.wrap {
+  height: auto;
+  height: 100%;
+  margin-bottom: -100px;
+  min-height: 100%;
+  position: relative;
+}
+
+.push, footer {
+  height: 100px;
+}
+
+/* floats */
+.none {
+  float: none;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clear {
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/*------------------------------*\
+      !DIV FORMAT CLASSES
+\*------------------------------*/
+
+.hidden {
+  display:none;
+}
+
+
+/*------------------------------*\
+      !GENERAL APPEARANCE
+          !! GLOBAL
+\*------------------------------*/
+
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+img, a {
+  border: none;
+}
+
+.wrap {
+  background-color: snow;
+}
+
+header, footer {
+  background-color: white;
+}
+
+a, a:visited {
+  color:black;
+}
+
+/*------------------------------*\
+        ! TYPOGRAPHY
+\*------------------------------*/
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-weight:normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:sans-serif;
+}
+li a, nav a {
+  font-family:sans-serif;
+}
+p, a {
+  font-family:serif;
+}
+
+/*------------------------------*\
+      ! ELEMENT STYLES
+\*------------------------------*/
+
+header {
+  height: 100px;
+  margin: 0 0 10px;
+}
+
+.login {
+  margin-top: 100px;
+}
+
+.login div {
+  float: right;
+  width: 30%;
+  margin-left: 5%;
+  background-color: white;
+  padding: 40px 30px 60px 30px;
+}

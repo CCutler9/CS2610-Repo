@@ -4,39 +4,53 @@
   <meta charset="UTF-8">
   <title>Landing Page</title>
   <link href="Derek.css" rel="stylesheet" type="text/css">
+  <!--<link href="Global.css" rel="stylesheet" type="text/css">-->
 </head>
 <body>
-    <div class="d3dw-wrap">
-      <header>
-          <div class="3dw-squeeze">
-
+    <div class="wrap">
+      <header id ="fixedheader">
+          <div class="squeeze">
+            <nav>
+              <a href="index.html">Home</a>
+              <a href="search.html">Search</a>
+              <a href="">Dashboard</a>
+              <a href="">Profile</a>
+              <a class="toggler visible" href="">Toggle</a>
+            </nav>
           </div>
       </header>
-      <div class="d3dw-content">
-          <div class="background-image"></div>
-          <div class="3dw-squeeze">
+      <div class="content">
+          <div class="squeeze">
             <div class="login">
-              <div>
-                <h1>Welcome</h1>
-                <p>_____ allows you to view and organize your photos from Instagram! You can also save your favorite searches and edit your profile. Log in to continue. </p>
-              </div>
               <div>
                 <h1>Your Account</h1>
                 <form>
                   <label for="uname">username</label>
                   <input type="text" name="username" id="uname"/>
+                  <br />
                   <label for="pword">password</label>
                   <input type="password" name="password" id="pword"/>
                   <p>don't have a profile? <a>Sign Up</a></p>
                   <input type="submit" value="Log In"/>
                 </form>
               </div>
+              <div>
+                <h1>Welcome</h1>
+                <p>_____ allows you to view and organize your photos from Instagram! You can also save your favorite searches and edit your profile. Log in to continue. </p>
+              </div>
+            </div>
+            <div class="profile hidden">
+              <img src=""/>
+              <div>
+                <h1>Hello _____</h1>
+              </div>
             </div>
           </div>
       </div>
+      <div class="push"></div>
     </div>
-    <footer>
-      <div class="d3dw-squeeze">
+    <footer id="fixedfooter">
+      <div class="squeeze">
 
       </div>
     </footer>
