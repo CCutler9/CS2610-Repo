@@ -85,6 +85,10 @@ img, a {
   border: none;
 }
 
+a {
+  cursor: pointer;
+}
+
 .wrap {
   background-color: snow;
 }
@@ -101,23 +105,70 @@ a, a:visited {
         ! TYPOGRAPHY
 \*------------------------------*/
 
-h1, h2, h3, h4, h5, h6, p, a {
-  font-weight:normal;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family:sans-serif;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight:bold;
+  cursor: default;
 }
-li a, nav a {
-  font-family:sans-serif;
+li a, nav a, label {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight:normal;
+  color: black;
 }
 p, a {
-  font-family:serif;
+  font-family: Georgia, serif;
+}
+
+p {
+  font-size: 0.875em ; /* 14px/16 = 0.875em */
+  line-height: 1.4375em; /* 23px/16 = 1.4375em */
+  color: slategray;
+}
+.callout {
+  font-family: Tahoma, Geneva, sans-serif;
+  letter-spacing: 0.0625em; /* 1px/16 = 0.0625em */
+  font-weight: bold;
+  color: lightslategray;
+}
+
+p a {
+  color:dodgerblue;
+}
+
+h1 {
+  font-size: 1.875em; /* 30px/16 = 1.875em */
+  color: dodgerblue;
+  text-shadow: 1px 1px 1px lightslategray;
+}
+
+label {
+  font-size: 1em;
+  color:slategray;
+
 }
 
 /*------------------------------*\
       ! ELEMENT STYLES
 \*------------------------------*/
+
+/* BUTTON STYLES */
+
+#button {
+  border: none;
+  font-weight:bold;
+  font-size: 1em;
+  color:white;
+  background-color:dodgerblue;
+  width: 100px;
+  height: 38px;
+  margin-top:30px;
+  cursor:pointer;
+}
+
+#button:hover {
+  color:dodgerblue;
+  background-color: #DDEEFF;
+}
 
 header {
   height: 100px;
@@ -132,6 +183,34 @@ header {
   float: right;
   width: 30%;
   margin-left: 5%;
-  background-color: white;
   padding: 40px 30px 60px 30px;
+}
+
+.login div:first-child {
+  background-color: white;
+  box-shadow: 0px -2px 5px whitesmoke,
+              2px 0px 5px whitesmoke,
+              0px 4px 5px whitesmoke,
+              -2px 0px 5px whitesmoke;
+}
+
+.login div h1 {
+  margin-bottom: 25px;
+}
+
+/* FORM STYLES */
+
+.login form label {
+  display:inline-block;
+  width:25%;
+  margin-bottom: 12px;
+}
+
+.login form input {
+  float:right;
+  display:inline-block;
+  width: 70%;
+  background-color:whitesmoke;
+  border-top: 2px solid gainsboro;
+  border-left: 2px solid gainsboro;
 }
