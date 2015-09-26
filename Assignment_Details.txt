@@ -21,4 +21,3 @@ The remaining pages will be worked on collectively.
 Login page leads to either the sign up page or the dashboard
 Search page shows results using the dashboard page
 Profile, search, and dashboard page can be reached from any other page
-
