@@ -166,7 +166,9 @@ label {
 
 #button:hover {
   color:dodgerblue;
-  background-color: #DDEEFF;
+  background-color: white;
+  box-shadow: 2px 2px 1px gainsboro inset,
+              -2px -2px 1px whitesmoke inset;
 }
 
 header {
