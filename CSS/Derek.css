@@ -34,7 +34,6 @@
 .wrap {
   height: auto;
   height: 100%;
-  margin-bottom: -100px;
   min-height: 100%;
   position: relative;
 }
@@ -175,9 +174,17 @@ header {
   margin: 0 0 10px;
 }
 
+.content {
+  /*background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
 .login {
   z-index: 0;
-  margin-top: -15px;
+  padding-top: 200px;
 }
 
 .login div {
