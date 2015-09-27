@@ -19,7 +19,7 @@ div img {
 
 #name {
   text algin: center;
-  margin: auto;
+  margin-right: 0px;
   margin-top: 10px;
   height: 30px;
   width: 21%;
@@ -29,7 +29,7 @@ div img {
 
 #email {
   text algin: center;
-  margin: auto;
+  margin-right: -3px;
   margin-top: 10px;
   height: 30px;
   width: 21%;
@@ -39,9 +39,9 @@ div img {
 
 #Bio {
   dislay: inline;
-  positioin: relative;
+  position: relative;
   text algin: center;
-  margin: auto;
+  margin-right: -20px;
   margin-top: 10px;
   height: 30px;
   width: 21%;
@@ -52,9 +52,9 @@ div img {
 
 #Other {
   dislay: inline;
-  positioin: relative;
+  position: relative;
   text algin: center;
-  margin: auto;
+  margin-right: 25px;
   margin-top: 10px;
   height: 30px;
   width: 21%;

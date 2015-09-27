@@ -59,13 +59,13 @@ nav {}
 
 .sidebar {
   z-index: 1;
-  width: 231px;
+  width: 200px;
   height: 100%; /* d3dw4rd */
   background-color: white; /* eliminated transparency d3dw4rd */
   position: absolute;
   float: left;
-  top: -20px; /* eliminates margin below header d3dw4rd */ 
-  margin: 0px 15px 50px 0; /* removed top margin de3dw4rd */
+  top: -20px; /* eliminates margin below header d3dw4rd */
+  margin: 0px 15px 50px 0; /* removed top margin d3dw4rd */
   border: 1px solid #CCC;
   padding: 90px 5px; /* added padding to top and bottom d3dw4rd */
 }
@@ -73,6 +73,40 @@ nav {}
 .sidebar ul li {
 	z-index: 1;
   list-style-type: none;
+}
+
+/*------------------------------*\
+      !GENERAL APPEARANCE
+          !! GLOBAL
+\*------------------------------*/
+
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+img, a {
+  border: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.wrap {
+  background-color: snow;
+}
+
+header, footer {
+  background-color: white;
+}
+
+a, a:visited {
+  color:black;
+}
+
+input:focus {
+  outline: none;
 }
 
 /*------------------------------*\
@@ -97,6 +131,7 @@ p {
   font-size: 0.875em ; /* 14px/16 = 0.875em */
   line-height: 1.4375em; /* 23px/16 = 1.4375em */
   color: slategray;
+  text-align: left;
 }
 .callout {
   font-family: Tahoma, Geneva, sans-serif;
@@ -115,8 +150,25 @@ h1 {
   text-shadow: 1px 1px 1px lightslategray;
 }
 
+h2 {
+  font-size: 1em;
+  color: lightslategray;
+}
+
+h3 {
+  font-size: 0.875em; /* 14px/16 = 0.875em */
+  color: lightslategray;
+}
+
 label {
   font-size: 1em;
   color:slategray;
+}
 
+/*------------------------------------*\
+                ¡ERRORS
+\*------------------------------------*/
+
+.error {
+  border: 3px solid red;
 }

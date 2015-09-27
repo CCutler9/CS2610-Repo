@@ -1,17 +1,21 @@
 $(document).ready(function(){
 
-  $('.search').click(function(e){
+  $('.submit').click(function(e){
     e.preventDefault();
     e.stopPropagation();
 
-    var query = $('.search-input').val();
+    var usern = $('.username-input').val();
+    var passw = $('.password-input').val();
 
-    if (query === '') {
-      $('.search-input').addClass('error');
-    } else if (query.indexOf('#') !== -1){
-      $('.search-input').addClass('error');
+    if (usern === '') {
+      $('.username-input').addClass('error');
     } else {
-      $('.search-input').removeClass('error');
+      $('.username-input').removeClass('error');
+    }
+    if (passw === '') {
+      $('.password-input').addClass('error');
+    } else {
+      $('.password-input').removeClass('error');
     }
   });
 
@@ -20,10 +24,10 @@ $(document).ready(function(){
     e.stopPropagation();
 
     if($(this).hasClass('visible')) {
-      $('.sidebar').hide('slide', {direction: 'left'}, 1000);
+      $('.sidebar').show('slide', {direction: 'left'}, 500);
       $(this).removeClass('visible');
     } else {
-      $('.sidebar').show('slide', {direction: 'left'}, 1000);
+      $('.sidebar').hide('slide', {direction: 'left'}, 1000);
       $(this).addClass('visible');
     }
 
