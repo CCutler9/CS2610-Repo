@@ -1,0 +1,272 @@
+
+@charset "UTF-8";
+
+/*------------------------------*\
+      !DIV POSITION CLASSES
+      !!GLOBAL
+\*------------------------------*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.squeeze {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+}
+
+.clear:after, .squeeze:after {
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+}
+
+.wrap {
+  height: auto;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.push, footer {
+  height: 100px;
+}
+
+/* floats */
+.none {
+  float: none;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clear {
+  display: block;
+  float: none;
+  clear: both;
+}
+
+/*------------------------------*\
+      !DIV FORMAT CLASSES
+\*------------------------------*/
+
+.hidden {
+  display:none;
+}
+
+/*------------------------------*\
+      ! ELEMENT STYLES
+\*------------------------------*/
+
+/* BUTTON STYLES */
+
+#button {
+  border: none;
+  font-weight:bold;
+  font-size: 1em;
+  color:white;
+  background-color:dodgerblue;
+  cursor:pointer;
+}
+
+#button:hover {
+  color:dodgerblue;
+  background-color: white;
+  box-shadow: 2px 2px 1px gainsboro inset,
+              -2px -2px 1px whitesmoke inset;
+}
+
+header {
+  height: 100px;
+  margin: 0 0 10px;
+}
+
+.content {
+  /*background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+/* LOGIN */
+
+.login {
+  z-index: 0;
+  padding-top: 200px;
+}
+
+.login div {
+  float: right;
+  width: 30%;
+  margin-left: 5%;
+  padding: 40px 30px 60px 30px;
+}
+
+.login div:first-child {
+  background-color: white;
+  box-shadow: 0px -2px 5px whitesmoke,
+              2px 0px 5px whitesmoke,
+              0px 4px 5px whitesmoke,
+              -2px 0px 5px whitesmoke;
+}
+
+.login div h1 {
+  margin-bottom: 25px;
+}
+
+.login #button {
+  width: 100px;
+  height: 38px;
+  margin-top:30px;
+}
+
+/* FORM STYLES */
+
+.login form label {
+  display:inline-block;
+  width: 25%;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.login form input {
+  float:right;
+  display:inline-block;
+  width: 70%;
+}
+
+.login form input, .search form input {
+  background-color:whitesmoke;
+  border-top: 2px solid gainsboro;
+  border-left: 2px solid gainsboro;
+}
+
+/* SEARCH */
+
+.search div {
+  width: 62%;
+  margin: 0 auto;
+}
+
+.search div:first-child {
+  background-color: white;
+  box-shadow: 0px -2px 5px whitesmoke,
+              2px 0px 5px whitesmoke,
+              0px 4px 5px whitesmoke,
+              -2px 0px 5px whitesmoke;
+  padding: 7px;
+}
+
+.search form input {
+  width: 78%;
+  height: 28px;
+  padding: 4px;
+  float: left;
+  font-size: 1em;
+}
+
+.search #button {
+  width: 100px;
+  float: right;
+  padding-top: 6px;
+}
+
+.search #saveicon {
+  display:block;
+  float:right;
+  width: 28px;
+  height: 28px;
+  margin-left: 7px;
+  background: url("../images/favoriteicon.png") no-repeat;
+  background-color: dodgerblue;
+  background-position: -19px 3px;
+}
+
+.search #saveicon:hover {
+  background-color: white;
+  background-position: 3px 3px;
+}
+
+.search a, .searchresults a {
+  color: lightslategray;
+}
+
+.search a:hover, .searchresults a:hover {
+  color: dodgerblue;
+}
+
+.search div:nth-child(2) {
+  margin-top: 17px;
+}
+
+.search h2, .searchresults h3 {
+  float: left;
+  margin-right: 11px;
+}
+
+.search li, .searchresults li {
+  float: left;
+  margin-right: 11px;
+}
+
+.searchresults {
+  margin-top: 45px;
+}
+
+.searchresults > div {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 45px;
+    background-color: white;
+    box-shadow: 0px -2px 5px whitesmoke,
+                2px 0px 5px whitesmoke,
+                0px 4px 5px whitesmoke,
+                -2px 0px 5px whitesmoke;
+    padding: 11px;
+}
+
+.searchresults > div:nth-child(3) {
+  margin-right: 0;
+}
+
+.searchresults > div div {
+  margin-top: 17px;
+}
+
+.searchresults img {
+  width: 100%;
+}
+
+.searchresults a {
+  font-size: 0.875em; /* 14px/16 = 0.875em */
+}
+
+.searchresults #likebutton {
+  display:block;
+  float:right;
+  width: 18px;
+  height: 17px;
+  background: url("../images/likeicon.png") no-repeat;
+  background-position: 0px 0px;
+}
+
+.searchresults #likebutton:hover {
+  background-position: -18px 0px;
+}

@@ -1,0 +1,12 @@
+#box {
+  margin: auto;
+  position: relative;
+  width:300px;
+  height:200px;
+  border: 2px solid black;
+}
+
+#dashTable {
+  margin: auto;
+  padding-bottom: 75px;
+}

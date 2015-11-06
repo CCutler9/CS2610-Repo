@@ -1,0 +1,94 @@
+h1{
+  text-align: center;
+  font-family: cursive;
+}
+
+div img {
+  margin-left: 0px;
+  margin-top: 30px;
+}
+
+#profile {
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 2px;
+  border-radius: 50%;
+  border: 2px solid #FFCC66;
+}
+
+#name {
+  text algin: center;
+  margin-right: 0px;
+  margin-top: 10px;
+  height: 30px;
+  width: 21%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#email {
+  text algin: center;
+  margin-right: -3px;
+  margin-top: 10px;
+  height: 30px;
+  width: 21%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#Bio {
+  dislay: inline;
+  position: relative;
+  text algin: center;
+  margin-right: -20px;
+  margin-top: 10px;
+  height: 30px;
+  width: 21%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+
+#Other {
+  dislay: inline;
+  position: relative;
+  text algin: center;
+  margin-right: 25px;
+  margin-top: 10px;
+  height: 30px;
+  width: 21%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 30px;
+}
+
+#save {
+  margin: auto;
+  margin-top: 10px;
+  width: 75px;
+  height: 25px;
+  font-size: 20px;
+  border-radius: 50px;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+  background-color: #FFCC66;
+}
+
+#button {
+  border: none;
+  font-weight:bold;
+  font-size: 1em;
+  color:white;
+  background-color:dodgerblue;
+  width: 100px;
+  height: 38px;
+  margin-top:30px;
+  cursor:pointer;
+}
+
+#button:hover {
+  color:dodgerblue;
+  background-color: #DDEEFF;
+}
