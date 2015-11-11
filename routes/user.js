@@ -17,4 +17,12 @@ router.get('/search', function(req, res) {
   })
 })
 
+router.get('/profile', function(req, res) {
+  res.render('profile', {
+    layout: 'auth_base',
+    title: 'Profile Page',
+    welcome: 'Welcome to your profile page!'
+  })
+})
+
 module.exports = router
