@@ -69,6 +69,97 @@
   display:none;
 }
 
+
+/*------------------------------*\
+      !GENERAL APPEARANCE
+          !! GLOBAL
+\*------------------------------*/
+
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+img, a {
+  border: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.wrap {
+  background-color: snow;
+}
+
+header, footer {
+  background-color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+/*------------------------------*\
+        ! TYPOGRAPHY
+\*------------------------------*/
+
+h1, h2, h3, h4, h5, h6, #button a {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight:bold;
+  cursor: default;
+}
+li a, nav a, label {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight:normal;
+  color: black;
+}
+p, a {
+  font-family: Georgia, serif;
+}
+
+p {
+  font-size: 0.875em ; /* 14px/16 = 0.875em */
+  line-height: 1.4375em; /* 23px/16 = 1.4375em */
+  color: slategray;
+  text-align: left;
+}
+.callout {
+  font-family: Tahoma, Geneva, sans-serif;
+  letter-spacing: 0.0625em; /* 1px/16 = 0.0625em */
+  font-weight: bold;
+  color: lightslategray;
+}
+
+p a {
+  color:dodgerblue;
+}
+
+a:hover {
+	color:black;
+}
+
+h1 {
+  font-size: 1.875em; /* 30px/16 = 1.875em */
+  color: dodgerblue;
+  text-shadow: 1px 1px 1px lightslategray;
+}
+
+h2 {
+  font-size: 1em;
+  color: lightslategray;
+}
+
+h3 {
+  font-size: 0.875em; /* 14px/16 = 0.875em */
+  color: lightslategray;
+}
+
+label {
+  font-size: 1em;
+  color:slategray;
+}
+
 /*------------------------------*\
       ! ELEMENT STYLES
 \*------------------------------*/
@@ -130,6 +221,10 @@ header {
   margin-bottom: 25px;
 }
 
+.login div .callout {
+	margin-bottom: 10px;
+}
+
 .login #button {
   width: 100px;
   height: 38px;
@@ -138,6 +233,7 @@ header {
 
 /* FORM STYLES */
 
+/* login form from initial index page */
 .login form label {
   display:inline-block;
   width: 25%;
@@ -151,10 +247,26 @@ header {
   width: 70%;
 }
 
+/* maintain for search form styles */
 .login form input, .search form input {
   background-color:whitesmoke;
   border-top: 2px solid gainsboro;
   border-left: 2px solid gainsboro;
+}
+
+/* sudo button style for landing page */
+
+.login #button {
+	padding: 8px 10px;
+}
+
+.login #button a{
+	position: relative;
+	color: white;
+}
+
+.login #button:hover a{
+	color: dodgerblue;
 }
 
 /* SEARCH */
