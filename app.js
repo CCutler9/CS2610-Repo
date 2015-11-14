@@ -42,6 +42,8 @@ app.get('/feed', function(req, res, next) {
       return next(err)
     }
     res.render('feed', {
+      layout: 'auth_base',
+      title: 'Dashboard',
       feed: feed.data
     })
   })

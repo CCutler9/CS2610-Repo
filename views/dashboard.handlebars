@@ -1,64 +1,24 @@
-<link href="/css/Chapter.css" rel="stylesheet" type="text/css">
+<link href="/css/Derek.css" rel="stylesheet" type="text/css">
 
-<table id="dashTable">
-      <tbody><tr>
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-
-        <td>
-          <div id="box"><img src="http://jnrgym.com/wp-content/uploads/2013/08/Facebook-no-profile-picture-icon-620x389.jpg" alt="Smiley face" height="200" width="300"></div>
-          <button type="button">Likes</button>
-          <button type="button">Comments</button>
-        </td>
-      </tr>
-
-    </tbody></table>
+<div class="content">
+  <div class="squeeze">
+    <div class="searchresults">
+      {{#each feed}}
+      <img src="{{this.images.standard_resolution.url}}" alt="" />
+      <div>
+      <h3>{{this.likes.count}} likes</h3>
+      <h3>{{this.comments.count}} comments</h3><br>
+        {{#if this.tags}}
+        <h3>tags</h3>
+        <ul>
+          {{#each this.tags}}
+          <li><a href="/user/search/{{this}}">{{this}}</a>,</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+        <a id="likebutton" href="#"></a>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

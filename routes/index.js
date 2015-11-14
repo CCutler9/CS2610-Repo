@@ -51,7 +51,7 @@ router.get('/auth/finalize', function(req, res, next) {
 
     req.session.access_token = data.access_token
 		req.session.user = data.user
-    res.redirect('/feed')
+    res.redirect('/user/dashboard')
   })
 })
 

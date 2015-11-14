@@ -2,10 +2,26 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 
-router.get('/dashboard', function(req, res) {
-  res.render('dashboard', {
-		layout: 'auth_base',
-    title: 'Dashboard'
+router.get('/dashboard', function(req, res, next) {
+  var options = {
+    url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
+  }
+
+  request.get(options, function(error, response, body) {
+    try {
+      var feed = JSON.parse(body)
+      if (feed.meta.code > 200) {
+        return next(feed.meta.error_message)
+      }
+    }
+    catch(err){
+      return next(err)
+    }
+    res.render('dashboard', {
+      layout: 'auth_base',
+      title: 'Dashboard',
+      feed: feed.data
+    })
   })
 })
 
