@@ -1,23 +1,32 @@
 <link href="/css/Derek.css" rel="stylesheet" type="text/css">
-
 <div class="content">
     <div class="squeeze">
-      <div class="login">
-        <div>
-          <form>
-            <p>don't have a profile? <a href="https://instagram.com">Sign Up</a></p>
-            <a id="button" href="/authorize">Log In</a>
-          </form>
+      <div class="account">
+        {{#if user}}
+        <div class="profile">
+          <img src="{{user.profile_picture}}"/>
+          <h1>{{user.full_name}}</h1>
+          <h2 class="darksubtext">{{user.username}}</h2>
+          <div id="button">
+          	 <a href="/user/dashboard">Continue</a>
+          </div>
+          <div>
+            <a href="">Log Out</a>
+          </div>
         </div>
+        {{else}}
+        <div class="login">
+        <h1> Your Account </h1>
+         <p class="callout">Linking (<span style="text-decoration: underline;">Insert clever name here</span>) to your Instagram account is easy. Click the button below to get started!</p>
+          <p>Don't have an instagram account? <a href="http://www.instagram.com" target="_blank">Click Here</a></p>
+         <div id="button">
+         	 <a href="/authorize">Log In</a>
+         </div>
+        </div>
+        {{/if}}
         <div>
           <h1>Welcome</h1>
           <p class="callout">(<span style="text-decoration: underline;">Insert clever name here</span>) allows you to view and organize your photos from Instagram! You can also save your favorite searches and edit your profile. Log in to continue. </p>
-        </div>
-      </div>
-      <div class="profile hidden">
-        <img src=""/>
-        <div>
-          <h1>Hello _____</h1>
         </div>
       </div>
     </div>

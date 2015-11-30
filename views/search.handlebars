@@ -5,9 +5,9 @@
       <div class="search">
         <div>
           <a id="saveicon" href="#"></a>
-          <form>
-            <input type="text" name="search"/>
-            <input type="submit" value="Search" id="button"/>
+          <form action="" method="post">
+            <input type="text" name="query"/>
+            <input type="submit" name="submit" value="Submit" id="button"/>
           </form>
           <div class="clear"></div>
         </div>
@@ -23,58 +23,24 @@
         <div class="clear"></div>
       </div>
       <div class="searchresults">
+        {{#each feed}}
         <div>
-          <img src="/images/placeholder.gif"/>
+          <img src="{{this.images.standard_resolution.url}}" alt=""/>
           <div>
+          <h3>{{this.likes.count}} likes</h3>
+          <h3>{{this.comments.count}} comments</h3><br>
+            {{#if this.tags}}
             <h3>tags</h3>
             <ul>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
+              {{#each this.tags}}
+              <li><a href="/user/search/{{this}}">{{this}}</a>,</li>
+              {{/each}}
             </ul>
+            {{/if}}
             <a id="likebutton" href="#"></a>
           </div>
         </div>
-        <div>
-          <img src="/images/placeholder.gif"/>
-          <div>
-            <h3>tags</h3>
-            <ul>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-            </ul>
-            <a id="likebutton" href="#"></a>
-          </div>
-        </div>
-        <div>
-          <img src="/images/placeholder.gif"/>
-          <div>
-            <h3>tags</h3>
-            <ul>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-            </ul>
-            <a id="likebutton" href="#"></a>
-          </div>
-        </div>
-        <div>
-          <img src="/images/placeholder.gif"/>
-          <div>
-            <h3>tags</h3>
-            <ul>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-              <li><a href="#">tag</a></li>
-            </ul>
-            <a id="likebutton" href="#"></a>
-          </div>
-        </div>
+        {{/each}}
       </div>
     </div>
 </div>
