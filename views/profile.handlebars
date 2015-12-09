@@ -4,10 +4,10 @@
     <img src="https://singularlabs.com/wp-content/uploads/2011/11/System-Ninja-2.2.png"/>
 </div>
   <div>
-    <h1>Username</h1>
-    <form>
+    <h1>{{instauser.username}}</h1>
+    <form class="user-form" action="" method="post">
       <label for="name">Name</label>
-      <input placeholder="Enter your full name here" type="text" name="name" id="name"/>
+      <input placeholder="Enter your full name here" type="text" value="{{instauser.full_name}}" name="name" id="name"/>
       <br />
       <label for="email">Email</label>
       <input placeholder="Enter your email address here" type="text" name="email" id="email"/>
@@ -18,7 +18,9 @@
       <label for="other">Fun Facts</label>
       <textarea placeholder="What's something that interests you" type="text" name="funfacts" id="Other"></textarea>
       <br />
-      <input type="submit" value="Save" id="button"/>
+      <button type="submit" value="Save" id="button">Save</button>
     </form>
   </div>
-  <p></p>
+  <br />
+  <br />
+  <br />

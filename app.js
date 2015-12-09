@@ -6,6 +6,10 @@ var request = require('request')
 var session = require('express-session')
 var indexRoute = require('./routes/index')
 var userRoutes = require('./routes/user')
+var assert = require('assert')
+
+var db = require('./db')
+var Users = require('./models/users')
 
 var app = express()
 
@@ -49,6 +53,17 @@ app.get('/feed', function(req, res, next) {
   })
 })
 
+db.connect('mongodb://user:password@ds047030.mongolab.com:47030/testing', function(err) {
+  if(err) {
+    console.log('Unable to connect to Mongo')
+    process.exit(1)
+  } else {
+    app.listen(3000, function() {
+      console.log('Listening on port 3000...')
+    })
+  }
+})
+
 app.use(function(err, req, res, next) {
   res.status(err.status || 500)
   res.render('error', {
@@ -56,5 +71,3 @@ app.use(function(err, req, res, next) {
     error: {}
   })
 })
-
-app.listen(3000)

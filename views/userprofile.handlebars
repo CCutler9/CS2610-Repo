@@ -1,0 +1,33 @@
+<link href="/css/Chitmoe.css" rel="stylesheet" type="text/css">
+
+{{#if success}}
+<p style="color:green">
+  {{success}}
+</p>
+{{/if}}
+
+<div id="profile">
+    <img src="https://singularlabs.com/wp-content/uploads/2011/11/System-Ninja-2.2.png"/>
+</div>
+  <div>
+    <h1>{{instauser.username}}</h1>
+    <form class="user-form" action="" method="post">
+      <input type="hidden" name="_id" value="{{user._id}}">
+      <label for="name">Name</label>
+      <input placeholder="Enter your full name here" type="text" value="{{user.name}}" name="name" id="name"/>
+      <br />
+      <label for="email">Email</label>
+      <input placeholder="Enter your email address here" type="text" value="{{user.email}}" name="email" id="email"/>
+      <br />
+      <label for="bio">Bio</label>
+      <input placeholder="Tell us a little about yourself" type="text" value="{{user.bio}}" name="bio" id="Bio"/>
+      <br />
+      <label for="other">Fun Facts</label>
+      <input placeholder="What's something that interests you" type="text" value="{{user.funfacts}}" name="funfacts" id="Other"/>
+      <br />
+      <button type="submit" value="Save" id="button">Save</button>
+    </form>
+  </div>
+  <p></p>
+  <p></p>
+  <p></p>

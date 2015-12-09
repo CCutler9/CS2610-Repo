@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var db = require('../db')
+var Users = require('../models/users')
 
 router.get('/dashboard', function(req, res, next) {
   var options = {
@@ -85,11 +87,51 @@ router.post('/search', function(req, res, next) {
   })
 })
 
-
 router.get('/profile', function(req, res) {
   res.render('profile', {
     layout: 'auth_base',
-    title: 'Profile'
+    title: 'Profile',
+    instauser: req.session.user
+  })
+})
+
+router.post('/profile', function(req, res) {
+
+    var user = req.body
+    Users.insert(user, function(result) {
+      req.session.userId = result.ops[0]._id
+      res.redirect('/user/userprofile')
+    })
+})
+
+router.get('/userprofile', function(req, res) {
+  if (req.session.userId) {
+    Users.find(req.session.userId, function(document) {
+      if (!document) return res.redirect('/user/profile')
+      console.log(document)
+
+      res.render('userprofile', {
+        layout: 'auth_base',
+        title: 'Profile',
+        user: document,
+        instauser: req.session.user
+      })
+    })
+  }
+  else {
+    res.redirect('/user/profile')
+  }
+})
+
+router.post('/userprofile', function(req, res) {
+  var user = req.body
+  Users.update(user, function(result) {
+    res.render('userprofile', {
+      layout: 'auth_base',
+      title: 'Profile',
+      user: user,
+      success: 'User updated successfully!'
+    })
   })
 })
 
