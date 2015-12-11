@@ -48,17 +48,18 @@ router.get('/search', function(req, res, next) {
   }
 
   request.get(options, function(error, response, body) {
-    try {
-      var feed = JSON.parse(body)
-      if (feed.meta.code > 200) {
-        return next(feed.meta.error_message)
-      }
-    }
-    catch(err){
-      return next(err)
-    }
     if (req.session.userId) {
+      try {
+        var feed = JSON.parse(body)
+        if (feed.meta.code > 200) {
+          return next(feed.meta.error_message)
+        }
+      }
+      catch(err){
+        return next(err)
+      }
       Users.find(req.session.userId, function(document) {
+        console.log('inside find function on router.get for search')
         if (!document) return res.redirect('/')
       //Render the update view
         res.render('search', {

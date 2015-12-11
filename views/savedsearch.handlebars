@@ -4,7 +4,7 @@
     <div class="squeeze">
       <div class="search">
 
-  <h1>Add New Saved Search</h1>
+  <h1>Add New Favorite Search</h1>
 <form class="user-form" action="/user/savedsearch/add" method="post">
   <input type="hidden" name="_id" value="{{user._id}}">
   <p>
@@ -17,7 +17,7 @@
 
 <div class="searchresults">
 {{#if user.tags}}
-  <h2>Current Saved Searches</h2>
+  <h2>Current Favorite Searches</h2>
   {{#each user.tags}}
   <br />
     <form action="/user/savedsearch/remove" method="post">

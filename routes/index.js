@@ -6,10 +6,20 @@ var cfg = require('../config')
 var Users = require('../models/users.js')
 
 router.get('/', function(req, res) {
+  if (req.session.userId){
   res.render('index',{
+    layout: 'auth_base',
     user: req.session.user,
     title: 'Home'
   })
+}
+else {
+  res.render('index', {
+    layout: 'base',
+    title: 'Home',
+    user: req.session.user
+  })
+}
 })
 
 router.get('/authorize', function (req, res) {
