@@ -13,11 +13,18 @@
         </div>
         <div>
           {{#if user.tags}}
-            <h2>Saved Searches</h2>
+            <h2>Current Saved Searches</h2>
             {{#each user.tags}}
                 <li>#<a href="/user/search/{{this}}">{{this}}</a></li>
+              </form>
             {{/each}}
           {{/if}}
+          <!-- <ul>
+            <li><a href="#">search term</a></li>
+            <li><a href="#">search term</a></li>
+            <li><a href="#">search term</a></li>
+            <li><a href="#">search term</a></li>
+          </ul> -->
         </div>
         <div class="clear"></div>
       </div>

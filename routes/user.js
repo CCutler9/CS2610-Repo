@@ -57,12 +57,21 @@ router.get('/search', function(req, res, next) {
     catch(err){
       return next(err)
     }
-    res.render('search', {
-      layout: 'auth_base',
-      title: 'Search',
-      feed: feed.data
-    })
-  })
+    if (req.session.userId) {
+      Users.find(req.session.userId, function(document) {
+        if (!document) return res.redirect('/')
+      //Render the update view
+        res.render('search', {
+          layout: 'auth_base',
+          title: 'Search',
+          feed: feed.data,
+          user: document
+        })
+      })
+  } else {
+    res.redirect('/')
+  }
+})
 })
 
 router.post('/search', function(req, res, next) {
@@ -81,21 +90,12 @@ router.post('/search', function(req, res, next) {
     catch(err){
       return next(err)
     }
-    if (req.session.userId) {
-      Users.find(req.session.userId, function(document) {
-        if (!document) return res.redirect('/')
 
         res.render('search', {
           layout: 'auth_base',
           title: 'Search',
-          feed: feed.data,
-          user: document
+          feed: feed.data
         })
-      })
-    }
-    else {
-      res.redirect('/')
-    }
   })
 })
 
