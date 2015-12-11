@@ -8,6 +8,8 @@ router.get('/dashboard', function(req, res, next) {
   var options = {
     url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
   }
+  console.log('req.session.user')
+  console.log(req.session.user)
 
   request.get(options, function(error, response, body) {
     try {
@@ -108,7 +110,6 @@ router.get('/userprofile', function(req, res) {
   if (req.session.userId) {
     Users.find(req.session.userId, function(document) {
       if (!document) return res.redirect('/user/profile')
-      console.log(document)
 
       res.render('userprofile', {
         layout: 'auth_base',
@@ -116,6 +117,8 @@ router.get('/userprofile', function(req, res) {
         user: document,
         instauser: req.session.user
       })
+      console.log('inside router.get of userprofile')
+      console.log(document)
     })
   }
   else {
@@ -124,6 +127,7 @@ router.get('/userprofile', function(req, res) {
 })
 
 router.post('/userprofile', function(req, res) {
+  console.log('inside router.post of userprofile')
   var user = req.body
   Users.update(user, function(result) {
     res.render('userprofile', {
@@ -132,6 +136,41 @@ router.post('/userprofile', function(req, res) {
       user: user,
       success: 'User updated successfully!'
     })
+  })
+})
+
+router.get('/savedsearch', function(req, res) {
+  if (req.session.userId) {
+    //Find user
+    Users.find(req.session.userId, function(document) {
+      if (!document) return res.redirect('/')
+      //Render the update view
+      res.render('savedsearch', {
+        layout: 'auth_base',
+        title: 'Saved Searches',
+        user: document
+      })
+    })
+  } else {
+    res.redirect('/')
+  }
+})
+
+router.post('/savedsearch/add', function(req, res) {
+  var tag = req.body.tag
+  var userId = req.session.userId
+  //Add the tag to the user
+  Users.addTag(userId, tag, function() {
+    res.redirect('/user/savedsearch')
+  })
+})
+
+router.post('/savedsearch/remove', function(req, res) {
+  var tag = req.body.tag
+  var userId = req.session.userId
+  //Add the tag to the user
+  Users.removeTag(userId, tag, function() {
+    res.redirect('/user/savedsearch')
   })
 })
 

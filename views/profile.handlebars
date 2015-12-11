@@ -1,22 +1,28 @@
 <link href="/css/Chitmoe.css" rel="stylesheet" type="text/css">
 
 <div id="profile">
-    <img src="https://singularlabs.com/wp-content/uploads/2011/11/System-Ninja-2.2.png"/>
+    <img src="{{user.profile_picture}}"/>
 </div>
   <div>
-    <h1>{{instauser.username}}</h1>
+    <h1>Welcome!</h1>
     <form class="user-form" action="" method="post">
+      <input type="hidden" name="_id" value="{{user._id}}">
+      <input type="hidden" name="profile_picture" value="{{user.profile_picture}}">
       <label for="name">Name</label>
-      <input placeholder="Enter your full name here" type="text" value="{{instauser.full_name}}" name="name" id="name"/>
+      <input placeholder="Enter your full name here" type="text"
+      value="{{user.full_name}}" name="full_name" id="name"/>
       <br />
-      <label for="email">Email</label>
-      <input placeholder="Enter your email address here" type="text" name="email" id="email"/>
+      <label for="uname">Username</label>
+      <input placeholder="Enter a username" type="text"
+      value="{{user.username}}" name="username" id="uname"/>
       <br />
       <label for="bio">Bio</label>
-      <textarea placeholder="Tell us a little about yourself" type="text" name="bio" id="Bio"></textarea>
+      <textarea placeholder="Tell us a little about yourself" type="text"
+      value="{{user.bio}}" name="bio" id="Bio"></textarea>
       <br />
-      <label for="other">Fun Facts</label>
-      <textarea placeholder="What's something that interests you" type="text" name="funfacts" id="Other"></textarea>
+      <label for="website">Website</label>
+      <input placeholder="Enter your personal website" type="text"
+      value="{{user.website}}"name="website" id="website">
       <br />
       <button type="submit" value="Save" id="button">Save</button>
     </form>

@@ -19,8 +19,9 @@ exports.find = function(id, callback) {
   //get the users collection
   var collection = db.get().collection('users')
   //find a user by _id
-  collection.findOne({'_id': ObjectId(id)}, function(err, document) {
+  collection.findOne({'_id': id}, function(err, document) {
     console.log('Found 1 user document')
+    console.log(document)
     callback(document)
   })
 }
@@ -28,15 +29,17 @@ exports.find = function(id, callback) {
 exports.update = function(user, callback) {
   //get the users collection
   var collection = db.get().collection('users')
-  user._id = ObjectId(user._id)
-
+console.log('inside update')
   //update the user
-  collection.update({'_id': user._id}, user, function(err, result) {
+  //{$set: user}
+  collection.update({'_id': user._id}, {$set: user}, function(err, result) {
     assert.equal(err, null)
     assert.equal(1, result.result.n)
     console.log('Updated 1 document in the users collection')
     callback(result)
   })
+
+  //req.session.user = user
 }
 
 exports.addTag = function(userId, tag, callback) {
@@ -44,7 +47,7 @@ exports.addTag = function(userId, tag, callback) {
   var collection = db.get().collection('users')
   //Add the tag
   collection.update(
-    {'_id': ObjectId(userId)},
+    {'_id': userId},
     { $push: { tags: tag }},
     function(err, result) {
       assert.equal(err, null)
@@ -59,7 +62,7 @@ exports.removeTag = function(userId, tag, callback) {
   var collection = db.get().collection('users')
   //Add the tag
   collection.update(
-    {'_id': ObjectId(userId)},
+    {'_id': userId},
     { $pull: { tags: tag }},
     function(err, result) {
       assert.equal(err, null)
