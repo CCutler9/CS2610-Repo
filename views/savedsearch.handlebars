@@ -4,24 +4,30 @@
     <div class="squeeze">
       <div class="search">
 
-  <h1>Manage Saved Searches</h1>
+  <h1>Add New Saved Search</h1>
 <form class="user-form" action="/user/savedsearch/add" method="post">
   <input type="hidden" name="_id" value="{{user._id}}">
   <p>
     <input type="text" name="tag" value="" placeholder="Tag Name">
   </p>
   <p>
-    <button type="submit">Submit</button>
+    <input type="submit" name="submit" value="Submit" id="button"/>
   </p>
 </form>
 
+<div class="searchresults">
 {{#if user.tags}}
-  <h2>Current Tags</h2>
+  <h2>Current Saved Searches</h2>
   {{#each user.tags}}
+  <br />
     <form action="/user/savedsearch/remove" method="post">
-      <li><a href="/user/search/{{this}}">{{this}}</a>,</li>
+      <li>#<a href="/user/search/{{this}}">{{this}}</a></li>
       <input type="hidden" name="tag" value="{{this}}">
       <button type="submit">Delete</button>
     </form>
   {{/each}}
 {{/if}}
+</div>
+</div>
+</div>
+</div>

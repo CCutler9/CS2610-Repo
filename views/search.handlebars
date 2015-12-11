@@ -12,13 +12,12 @@
           <div class="clear"></div>
         </div>
         <div>
-          <h2>recent searches</h2>
-          <ul>
-            <li><a href="#">search term</a></li>
-            <li><a href="#">search term</a></li>
-            <li><a href="#">search term</a></li>
-            <li><a href="#">search term</a></li>
-          </ul>
+          {{#if user.tags}}
+            <h2>Saved Searches</h2>
+            {{#each user.tags}}
+                <li>#<a href="/user/search/{{this}}">{{this}}</a></li>
+            {{/each}}
+          {{/if}}
         </div>
         <div class="clear"></div>
       </div>
