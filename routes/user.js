@@ -8,8 +8,8 @@ router.get('/dashboard', function(req, res, next) {
   var options = {
     url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
   }
-  console.log('req.session.user')
-  console.log(req.session.user)
+  // console.log('req.session.user')
+  // console.log(req.session.user)
 
   request.get(options, function(error, response, body) {
     try {
@@ -59,7 +59,7 @@ router.get('/search', function(req, res, next) {
         return next(err)
       }
       Users.find(req.session.userId, function(document) {
-        console.log('inside find function on router.get for search')
+        // console.log('inside find function on router.get for search')
         if (!document) return res.redirect('/')
       //Render the update view
         res.render('search', {
@@ -128,8 +128,8 @@ router.get('/userprofile', function(req, res) {
         user: document,
         instauser: req.session.user
       })
-      console.log('inside router.get of userprofile')
-      console.log(document)
+      // console.log('inside router.get of userprofile')
+      // console.log(document)
     })
   }
   else {
@@ -138,7 +138,7 @@ router.get('/userprofile', function(req, res) {
 })
 
 router.post('/userprofile', function(req, res) {
-  console.log('inside router.post of userprofile')
+  // console.log('inside router.post of userprofile')
   var user = req.body
   Users.update(user, function(result) {
     res.render('userprofile', {

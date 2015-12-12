@@ -21,7 +21,7 @@ exports.find = function(id, callback) {
   //find a user by _id
   collection.findOne({'_id': id}, function(err, document) {
     console.log('Found 1 user document')
-    console.log(document)
+    // console.log(document)
     callback(document)
   })
 }
