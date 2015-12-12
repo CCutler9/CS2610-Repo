@@ -1,23 +1,6 @@
-Corbin:
-Global HTML code (header, footer)
-Saved searches side menu
-Global css
-
-Chapter:
-Dashboard
-
-Chitmoe:
-Profile
-
-Derek:
-Search/search results
-Sign Up/login
-
-
-Pick one page and paste it under your name.
-The remaining pages will be worked on collectively.
-
-
-Login page leads to either the sign up page or the dashboard
-Search page shows results using the dashboard page
-Profile, search, and dashboard page can be reached from any other page
+To-Do:
+-Aesthetic appeal on saved search page
+-Get saved searches to show up after typing in a search and hitting submit
+  (they show up when first coming to the page and by clicking the search button
+   on the menu bar and when navigating by clicking on the tags of images that
+   are shown. Just not when clicking submit and searching that way)

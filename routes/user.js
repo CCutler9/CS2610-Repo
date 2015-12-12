@@ -82,6 +82,7 @@ router.post('/search', function(req, res, next) {
   }
 
   request.get(options, function(error, response, body) {
+    if (req.session.userId) {
     try {
       var feed = JSON.parse(body)
       if (feed.meta.code > 200) {
@@ -91,13 +92,21 @@ router.post('/search', function(req, res, next) {
     catch(err){
       return next(err)
     }
-
-        res.render('search', {
-          layout: 'auth_base',
-          title: 'Search',
-          feed: feed.data
-        })
-  })
+    Users.find(req.session.userId, function(document) {
+      // console.log('inside find function on router.get for search')
+      if (!document) return res.redirect('/')
+    //Render the update view
+      res.render('search', {
+        layout: 'auth_base',
+        title: 'Search',
+        feed: feed.data,
+        user: document
+      })
+    })
+  } else {
+    res.redirect('/')
+  }
+})
 })
 
 router.get('/profile', function(req, res) {
