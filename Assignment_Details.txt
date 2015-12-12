@@ -1,6 +1,2 @@
 To-Do:
 -Aesthetic appeal on saved search page
--Get saved searches to show up after typing in a search and hitting submit
-  (they show up when first coming to the page and by clicking the search button
-   on the menu bar and when navigating by clicking on the tags of images that
-   are shown. Just not when clicking submit and searching that way)
